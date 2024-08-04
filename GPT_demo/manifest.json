@@ -1,0 +1,21 @@
+// 描述扩展程序的元数据文件
+{
+    "name": "todo list extension",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "An extension to recordtodo list.",
+    "icons": {
+        "32": "icons/todo-icon.png"
+    },
+    "action": {
+        "default_popup": "todo.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+              "<all_urls>"
+            ],
+            "js": ["lib/jquery.min.js","lib/todo.js"]
+        }
+    ]
+  }
